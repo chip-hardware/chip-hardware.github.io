@@ -1,1 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Corporate Transparency | Neapolis Cafe</title>
+    <link rel="canonical" href="https://neapoliscafe.com/en/company-info.html" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <style>
+        :root {
+            --primary: #0077B6;
+            --primary-dark: #005A8C;
+            --accent: #023E8A;
+            --bg-light: #ffffff;
+            --bg-soft: #F0F5F9;
+            --text-dark: #1A1A2E;
+            --text-body: #2D3748;
+            --text-muted: #4A5568;
+            --text-white: #FFFFFF;
+            --gold: #D4A843;
+            --gold-light: #E8C86A;
+            --font-heading: 'Playfair Display', serif;
+            --font-body: 'Plus Jakarta Sans', sans-serif;
+            --radius: 16px;
+            --shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; font-size: 16px; }
+        body {
+            font-family: var(--font-body);
+            background-color: var(--bg-light);
+            color: var(--text-body);
+            line-height: 1.7;
+            padding-top: 80px;
+        }
+        .container { max-width: 1000px; margin: 0 auto; padding: 0 24px; }
+        h1, h2, h3 { font-family: var(--font-heading); color: var(--text-dark); }
+        h1 { font-size: 2.8rem; margin-bottom: 8px; }
+        h1 span { color: var(--gold); }
+        h2 { font-size: 1.8rem; margin: 32px 0 16px; color: var(--accent); border-bottom: 2px solid var(--bg-soft); padding-bottom: 8px; }
+        .sub { color: var(--text-muted); margin-bottom: 32px; font-size: 1.05rem; }
+        .info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin: 16px 0; }
+        .info-card { background: var(--bg-soft); border-radius: var(--radius); padding: 20px 24px; border-left: 4px solid var(--primary); box-shadow: var(--shadow); }
+        .info-card strong { color: var(--text-dark); display: block; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.5px; color: var(--text-muted); }
+        .info-card .value { font-size: 1.05rem; margin-top: 4px; color: var(--text-dark); }
+        .info-card .value a { color: var(--primary); text-decoration: none; }
+        .info-card .value a:hover { text-decoration: underline; }
+        .partner { background: var(--bg-light); border: 1px solid rgba(0,0,0,0.06); border-radius: var(--radius); padding: 14px 20px; margin: 8px 0; }
+        .btn-back { display: inline-block; margin: 32px 0 16px; padding: 12px 28px; background: var(--primary); color: var(--text-white); border-radius: 50px; text-decoration: none; font-weight: 600; transition: all 0.3s ease; }
+        .btn-back:hover { background: var(--primary-dark); transform: translateY(-2px); }
+        .legal-note { font-size: 0.85rem; color: var(--text-muted); border-top: 1px solid var(--bg-soft); padding-top: 24px; margin-top: 32px; }
+        .lang-switch { text-align: right; margin-bottom: 20px; }
+        .lang-switch a { color: var(--primary); text-decoration: none; font-weight: 500; margin-left: 12px; }
+        .lang-switch a:hover { text-decoration: underline; }
+        footer {
+            background: var(--accent);
+            color: rgba(255,255,255,0.85);
+            padding: 32px 24px;
+            text-align: center;
+            margin-top: 48px;
+        }
+        footer .logo { font-family: var(--font-heading); font-size: 1.8rem; color: var(--text-white); }
+        footer .logo span { color: var(--gold-light); }
+        footer .copy { font-size: 0.9rem; opacity: 0.6; margin-top: 8px; }
+        @media (max-width: 700px) { .info-grid { grid-template-columns: 1fr; } h1 { font-size: 2rem; } }
+    </style>
+</head>
+<body>
 
+    <header style="position:fixed;top:0;left:0;width:100%;z-index:1000;background:rgba(255,255,255,0.97);backdrop-filter:blur(12px);border-bottom:2px solid var(--primary);padding:10px 0;">
+        <div style="max-width:1200px;margin:0 auto;padding:0 24px;display:flex;justify-content:space-between;align-items:center;">
+            <a href="/" style="font-family:var(--font-heading);font-size:1.6rem;font-weight:700;color:var(--accent);text-decoration:none;">Neapolis <span style="color:var(--gold);">Cafe</span></a>
+            <div class="lang-switch" style="margin-bottom:0;">
+                <a href="/en/company-info.html" style="color:var(--primary);text-decoration:none;font-weight:500;">🇬🇧 EN</a>
+                <a href="/el/company-info.html" style="color:var(--primary);text-decoration:none;font-weight:500;margin-left:12px;">🇬🇷 EL</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1>Corporate <span>Transparency</span></h1>
+        <p class="sub">In accordance with Article 47 of Law 4072/2012</p>
+
+        <h2>Company Details</h2>
+        <div class="info-grid">
+            <div class="info-card"><strong>Legal Name</strong><div class="value">NEAPOLIS CAFE Ι Κ Ε</div></div>
+            <div class="info-card"><strong>Distinctive Title</strong><div class="value">NEAPOLIS CAFE</div></div>
+            <div class="info-card"><strong>G.E.MI. Number</strong><div class="value">193161138000</div></div>
+            <div class="info-card"><strong>TIN / Tax Office</strong><div class="value">803255016 / Mykonos</div></div>
+            <div class="info-card"><strong>Legal Form</strong><div class="value">Private Capital Company (I.K.E.)</div></div>
+            <div class="info-card"><strong>Share Capital</strong><div class="value">€70,000.00</div></div>
+            <div class="info-card"><strong>Total Guarantee Contributions</strong><div class="value">€0.00</div></div>
+            <div class="info-card"><strong>Company Status</strong><div class="value">Active / Not under liquidation</div></div>
+        </div>
+
+        <h2>Registered Office &amp; Contact</h2>
+        <div class="info-grid">
+            <div class="info-card"><strong>Address</strong><div class="value">Fabrika, P.C. 84600, Mykonos</div></div>
+            <div class="info-card"><strong>Telephone</strong><div class="value"><a href="tel:+306985638212">6985638212</a></div></div>
+            <div class="info-card"><strong>Email</strong><div class="value"><a href="mailto:neapolis.cafe1@gmail.com">neapolis.cafe1@gmail.com</a></div></div>
+            <div class="info-card"><strong>Website</strong><div class="value"><a href="https://neapoliscafe.com">neapoliscafe.com</a></div></div>
+        </div>
+
+        <h2>Management &amp; Partners</h2>
+        <div class="info-card" style="margin-bottom:12px;"><strong>Manager</strong><div class="value">Izaeva Aida</div></div>
+        <div class="info-card"><strong>Partners &amp; Contributions</strong>
+            <div class="partner"><strong>Izaeva Aida</strong> — Italy · Holder of 180 shares · Capital Contribution</div>
+            <div class="partner"><strong>Calogero Armando</strong> — Italy · Holder of 360 shares · Capital Contribution</div>
+            <div class="partner"><strong>Balan Valentyna</strong> — Italy · Holder of 60 shares · Capital Contribution</div>
+        </div>
+
+        <p class="legal-note"><i class="fas fa-info-circle" aria-hidden="true"></i> This publication is made in accordance with Article 47 of Law 4072/2012 on corporate transparency.</p>
+
+        <a href="/" class="btn-back"><i class="fas fa-arrow-left" aria-hidden="true"></i> Back to home</a>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="logo" aria-hidden="true">Neapolis <span>Cafe</span></div>
+            <div class="copy">&copy; 2026 Neapolis Cafe. All rights reserved.</div>
+        </div>
+    </footer>
+</body>
+</html>
