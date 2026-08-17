@@ -55,7 +55,8 @@
                 "closes": "04:00"
             }
         ],
-        "servesCuisine": ["Italian", "Bakery", "Coffee"]
+        "servesCuisine": ["Italian", "Bakery", "Coffee"],
+        "foundingDate": "2026"
     }
     </script>
 
@@ -387,6 +388,45 @@
             max-width: 820px;
             padding: 20px;
         }
+
+        /* 🔥 НОВИЙ БЕЙДЖ З АДРЕСОЮ ТА ДАТОЮ */
+        .hero-badge-group {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px 16px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(8px);
+            border-radius: 40px;
+            padding: 8px 24px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            max-width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 0.8rem;
+            font-weight: 400;
+            letter-spacing: 0.3px;
+        }
+
+        .hero-badge i {
+            color: var(--gold-light);
+            font-size: 0.75rem;
+        }
+
+        .hero-badge-divider {
+            color: rgba(255, 255, 255, 0.3);
+            font-size: 0.6rem;
+        }
+
         .hero-content h1 {
             color: var(--text-white);
             margin-bottom: 8px;
@@ -404,20 +444,6 @@
             color: rgba(255, 255, 255, 0.92);
             font-size: 1.15rem;
             margin-bottom: 28px;
-        }
-        .hero-content .badge {
-            display: inline-block;
-            background: rgba(255, 255, 255, 0.15);
-            backdrop-filter: blur(8px);
-            color: var(--text-white);
-            padding: 8px 24px;
-            border-radius: 40px;
-            font-size: 0.8rem;
-            font-weight: 500;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            margin-bottom: 20px;
         }
 
         .night-badge {
@@ -1049,24 +1075,59 @@
             border-color: rgba(212, 168, 67, 0.2);
             transform: translateY(-3px);
         }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            flex-wrap: wrap;
+            margin: 16px 0 8px;
+            font-size: 0.95rem;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.85);
+            text-decoration: none;
+            transition: color 0.3s ease, transform 0.2s ease;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-weight: 400;
+            letter-spacing: 0.3px;
+        }
+
+        .footer-links a:hover,
+        .footer-links a:focus {
+            color: var(--gold-light);
+            transform: translateY(-1px);
+            background: rgba(255, 255, 255, 0.06);
+        }
+
+        .footer-links .divider {
+            color: rgba(255, 255, 255, 0.25);
+            user-select: none;
+        }
+
         footer .copy {
             font-size: 0.9rem;
             opacity: 0.6;
             margin-top: 8px;
         }
-		footer, footer p, footer span, footer div {
-			color: #ffffff !important;
-		}
-		footer a {
-			color: #f1c40f !important;
-			text-decoration: underline;
-		}
-		footer a:hover {
-			color: #ffffff !important;
-		}
-		.gold-text {
-			color: #f1c40f !important; /* Гарний золотистий колір */
-		}
+
+        .contact-details-footer {
+            margin: 8px 0 4px;
+        }
+
+        .contact-details-footer p {
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 0.95rem;
+            margin: 4px 0;
+        }
+
+        .contact-details-footer i {
+            margin-right: 6px;
+            opacity: 0.7;
+        }
+
         /* ============================================================
            RESPONSIVE — WCAG COMPLIANT
            ============================================================ */
@@ -1109,6 +1170,18 @@
             .info-grid {
                 grid-template-columns: 1fr;
                 gap: 40px;
+            }
+
+            .hero-badge-group {
+                padding: 6px 16px;
+                border-radius: 30px;
+                gap: 4px 10px;
+            }
+            .hero-badge {
+                font-size: 0.7rem;
+            }
+            .hero-badge i {
+                font-size: 0.6rem;
             }
         }
 
@@ -1185,6 +1258,16 @@
             .why-icon i {
                 font-size: 1.4rem;
             }
+            .hero-badge-group {
+                padding: 4px 12px;
+                border-radius: 20px;
+            }
+            .hero-badge {
+                font-size: 0.6rem;
+            }
+            .hero-badge i {
+                font-size: 0.5rem;
+            }
         }
     </style>
 </head>
@@ -1226,7 +1309,17 @@
         </div>
 
         <div class="hero-content" id="main-content">
-            <div class="badge"><i class="fas fa-location-dot" aria-hidden="true"></i> Mykonos Town · Est. 2024</div>
+            <!-- 🔥 НОВИЙ БЕЙДЖ З АДРЕСОЮ ТА ДАТОЮ ЗАСНУВАННЯ -->
+            <div class="hero-badge-group">
+                <span class="hero-badge">
+                    <i class="fas fa-location-dot" aria-hidden="true"></i> Fabrika Agiou Ioannou, Mykonos Town
+                </span>
+                <span class="hero-badge-divider">✦</span>
+                <span class="hero-badge">
+                    <i class="fas fa-calendar-alt" aria-hidden="true"></i> Est. 2026
+                </span>
+            </div>
+
             <h1>Neapolis <span>Cafe</span></h1>
             <h2>🇮🇹 Italian Flavors ✦ 🇬🇷 Greek Soul</h2>
             <p>Authentic Italian recipes, warm Aegean hospitality, and the spirit of Mykonos — all in one place.</p>
@@ -1235,7 +1328,9 @@
             </div>
             <div class="btn-group">
                 <a href="#menu" class="btn btn-primary">Explore Our Menu</a>
-                <a href="https://maps.google.com/maps?daddr=Fabrika+Agiou+Ioannou+Mykonos+Town+846000+Greece" target="_blank" class="btn btn-secondary" rel="noopener noreferrer">Find Us</a>
+                <a href="https://www.google.com/maps/dir//Fabrika+Agiou+Ioannou+Mykonos+Town+846000+Greece" target="_blank" class="btn btn-secondary" rel="noopener noreferrer">
+                    <i class="fas fa-route" aria-hidden="true"></i> Get Directions
+                </a>
             </div>
         </div>
     </section>
@@ -1279,137 +1374,137 @@
                 <span class="text-muted text-small">Click on any dish to see it in full size</span></p>
 
             <div class="menu-grid">
-				<!-- Caffetteria -->
-				<div class="menu-category">
-					<h3><i class="fas fa-mug-hot" aria-hidden="true"></i> Caffetteria</h3>
-					<button class="menu-item" onclick="openLightbox('images/caffe-espresso-napoletano-traditional-italian.webp', 'Caffè Espresso Napoletano', 'Traditional Neapolitan espresso')" aria-label="View Caffè Espresso Napoletano">
-						<div class="menu-item-content">
-							<div class="name">Caffè Espresso Napoletano</div>
-							<div class="desc">Traditional Neapolitan espresso — single, double, macchiato</div>
-						</div>
-						<span class="menu-item-arrow"><i class="fas fa-chevron-right" aria-hidden="true"></i></span>
-					</button>
-					<button class="menu-item" onclick="openLightbox('images/caffe-freddo-espresso-greek-iced-coffee.webp', 'Caffè Freddo Espresso', 'Chilled whipped espresso — Greek summer favorite')" aria-label="View Caffè Freddo Espresso">
-						<div class="menu-item-content">
-							<div class="name">Caffè Freddo Espresso (Greco)</div>
-							<div class="desc">Chilled whipped espresso — a refreshing Greek summer favorite</div>
-						</div>
-						<span class="menu-item-arrow"><i class="fas fa-chevron-right" aria-hidden="true"></i></span>
-					</button>
-					<button class="menu-item" onclick="openLightbox('images/cappuccino-hot-chocolate-italian-drinks.webp', 'Cappuccino / Cioccolata Calda', 'Classic Italian hot drinks')" aria-label="View Cappuccino and Cioccolata Calda">
-						<div class="menu-item-content">
-							<div class="name">Cappuccino · Tè caldo · Cioccolata Calda</div>
-							<div class="desc">Classic cappuccino, hot tea, or rich Italian hot chocolate</div>
-						</div>
-						<span class="menu-item-arrow"><i class="fas fa-chevron-right" aria-hidden="true"></i></span>
-					</button>
-					<button class="menu-item" onclick="openLightbox('images/001 (8).webp', 'Granite', 'Italian slush ice — lemon, strawberry, or coffee')" aria-label="View Granite">
-						<div class="menu-item-content">
-							<div class="name">Granite</div>
-							<div class="desc">Italian slush ice — lemon, strawberry, or coffee</div>
-						</div>
-						<span class="menu-item-arrow"><i class="fas fa-chevron-right" aria-hidden="true"></i></span>
-					</button>
-				</div>
+                <!-- Caffetteria -->
+                <div class="menu-category">
+                    <h3><i class="fas fa-mug-hot" aria-hidden="true"></i> Caffetteria</h3>
+                    <button class="menu-item" onclick="openLightbox('images/caffe-espresso-napoletano-traditional-italian.webp', 'Caffè Espresso Napoletano', 'Traditional Neapolitan espresso')" aria-label="View Caffè Espresso Napoletano">
+                        <div class="menu-item-content">
+                            <div class="name">Caffè Espresso Napoletano</div>
+                            <div class="desc">Traditional Neapolitan espresso — single, double, macchiato</div>
+                        </div>
+                        <span class="menu-item-arrow"><i class="fas fa-chevron-right" aria-hidden="true"></i></span>
+                    </button>
+                    <button class="menu-item" onclick="openLightbox('images/caffe-freddo-espresso-greek-iced-coffee.webp', 'Caffè Freddo Espresso', 'Chilled whipped espresso — Greek summer favorite')" aria-label="View Caffè Freddo Espresso">
+                        <div class="menu-item-content">
+                            <div class="name">Caffè Freddo Espresso (Greco)</div>
+                            <div class="desc">Chilled whipped espresso — a refreshing Greek summer favorite</div>
+                        </div>
+                        <span class="menu-item-arrow"><i class="fas fa-chevron-right" aria-hidden="true"></i></span>
+                    </button>
+                    <button class="menu-item" onclick="openLightbox('images/cappuccino-hot-chocolate-italian-drinks.webp', 'Cappuccino / Cioccolata Calda', 'Classic Italian hot drinks')" aria-label="View Cappuccino and Cioccolata Calda">
+                        <div class="menu-item-content">
+                            <div class="name">Cappuccino · Tè caldo · Cioccolata Calda</div>
+                            <div class="desc">Classic cappuccino, hot tea, or rich Italian hot chocolate</div>
+                        </div>
+                        <span class="menu-item-arrow"><i class="fas fa-chevron-right" aria-hidden="true"></i></span>
+                    </button>
+                    <button class="menu-item" onclick="openLightbox('images/001 (8).webp', 'Granite', 'Italian slush ice — lemon, strawberry, or coffee')" aria-label="View Granite">
+                        <div class="menu-item-content">
+                            <div class="name">Granite</div>
+                            <div class="desc">Italian slush ice — lemon, strawberry, or coffee</div>
+                        </div>
+                        <span class="menu-item-arrow"><i class="fas fa-chevron-right" aria-hidden="true"></i></span>
+                    </button>
+                </div>
 
-				<!-- Dolci -->
-				<div class="menu-category">
-					<h3><i class="fas fa-cake" aria-hidden="true"></i> Dolci</h3>
-					<button class="menu-item" onclick="openLightbox('images/cornetto-sfoglia-cereali-italian-croissant.webp', 'Cornetto Sfoglia', 'Flaky Italian croissant — plain or filled')" aria-label="View Cornetto Sfoglia">
-						<div class="menu-item-content">
-							<div class="name">Cornetto Sfoglia · ai Cereali</div>
-							<div class="desc">Flaky Italian croissant — plain, cereal, filled with Nutella or jam</div>
-						</div>
-						<span class="menu-item-arrow"><i class="fas fa-chevron-right" aria-hidden="true"></i></span>
-					</button>
-					<button class="menu-item" onclick="openLightbox('images/brioche-con-tuppo-sicilian-bun.webp', 'Brioche con Tuppo', 'Sicilian brioche bun — perfect with Nutella')" aria-label="View Brioche con Tuppo">
-						<div class="menu-item-content">
-							<div class="name">Brioche con Tuppo Vuota</div>
-							<div class="desc">Traditional Sicilian brioche bun — perfect with Nutella or jam</div>
-						</div>
-						<span class="menu-item-arrow"><i class="fas fa-chevron-right" aria-hidden="true"></i></span>
-					</button>
-					<button class="menu-item" onclick="openLightbox('images/graffa-sfogliatella-baba-neapolitan-pastries.webp', 'Graffa / Sfogliatella / Babà', 'Authentic Neapolitan pastries')" aria-label="View Graffa Napoletana">
-						<div class="menu-item-content">
-							<div class="name">Graffa · Sfogliatella · Babà</div>
-							<div class="desc">Sugar donut, ricotta pastry, or rum-soaked Baba</div>
-						</div>
-						<span class="menu-item-arrow"><i class="fas fa-chevron-right" aria-hidden="true"></i></span>
-					</button>
-					<button class="menu-item" onclick="openLightbox('images/torta-caprese-flourless-chocolate-cake.webp', 'Torta Caprese', 'Flourless chocolate-almond cake')" aria-label="View Torta Caprese">
-						<div class="menu-item-content">
-							<div class="name">Torta Caprese</div>
-							<div class="desc">Flourless chocolate-almond cake — rich and decadent</div>
-						</div>
-						<span class="menu-item-arrow"><i class="fas fa-chevron-right" aria-hidden="true"></i></span>
-					</button>
-				</div>
+                <!-- Dolci -->
+                <div class="menu-category">
+                    <h3><i class="fas fa-cake" aria-hidden="true"></i> Dolci</h3>
+                    <button class="menu-item" onclick="openLightbox('images/cornetto-sfoglia-cereali-italian-croissant.webp', 'Cornetto Sfoglia', 'Flaky Italian croissant — plain or filled')" aria-label="View Cornetto Sfoglia">
+                        <div class="menu-item-content">
+                            <div class="name">Cornetto Sfoglia · ai Cereali</div>
+                            <div class="desc">Flaky Italian croissant — plain, cereal, filled with Nutella or jam</div>
+                        </div>
+                        <span class="menu-item-arrow"><i class="fas fa-chevron-right" aria-hidden="true"></i></span>
+                    </button>
+                    <button class="menu-item" onclick="openLightbox('images/brioche-con-tuppo-sicilian-bun.webp', 'Brioche con Tuppo', 'Sicilian brioche bun — perfect with Nutella')" aria-label="View Brioche con Tuppo">
+                        <div class="menu-item-content">
+                            <div class="name">Brioche con Tuppo Vuota</div>
+                            <div class="desc">Traditional Sicilian brioche bun — perfect with Nutella or jam</div>
+                        </div>
+                        <span class="menu-item-arrow"><i class="fas fa-chevron-right" aria-hidden="true"></i></span>
+                    </button>
+                    <button class="menu-item" onclick="openLightbox('images/graffa-sfogliatella-baba-neapolitan-pastries.webp', 'Graffa / Sfogliatella / Babà', 'Authentic Neapolitan pastries')" aria-label="View Graffa Napoletana">
+                        <div class="menu-item-content">
+                            <div class="name">Graffa · Sfogliatella · Babà</div>
+                            <div class="desc">Sugar donut, ricotta pastry, or rum-soaked Baba</div>
+                        </div>
+                        <span class="menu-item-arrow"><i class="fas fa-chevron-right" aria-hidden="true"></i></span>
+                    </button>
+                    <button class="menu-item" onclick="openLightbox('images/torta-caprese-flourless-chocolate-cake.webp', 'Torta Caprese', 'Flourless chocolate-almond cake')" aria-label="View Torta Caprese">
+                        <div class="menu-item-content">
+                            <div class="name">Torta Caprese</div>
+                            <div class="desc">Flourless chocolate-almond cake — rich and decadent</div>
+                        </div>
+                        <span class="menu-item-arrow"><i class="fas fa-chevron-right" aria-hidden="true"></i></span>
+                    </button>
+                </div>
 
-				<!-- Rustici & Pizza -->
-				<div class="menu-category">
-					<h3><i class="fas fa-pizza-slice" aria-hidden="true"></i> Rustici &amp; Pizza</h3>
-					<button class="menu-item" onclick="openLightbox('images/pizza-napoletana-in-teglia-pan-baked.webp', 'Pizza Napoletana', 'Traditional pan-baked pizza with mozzarella')" aria-label="View Pizza Napoletana">
-						<div class="menu-item-content">
-							<div class="name">Pizza Napoletana in teglia</div>
-							<div class="desc">Pan-baked pizza with tomato sauce and melted mozzarella</div>
-						</div>
-						<span class="menu-item-arrow"><i class="fas fa-chevron-right" aria-hidden="true"></i></span>
-					</button>
-					<button class="menu-item" onclick="openLightbox('images/focaccia-romana-pinsa-flatbread.webp', 'Focaccia Romana', 'Crispy Roman flatbread')" aria-label="View Focaccia Romana">
-						<div class="menu-item-content">
-							<div class="name">Focaccia Romana · Pinsa</div>
-							<div class="desc">Crispy flatbread with tomato &amp; mozzarella or prosciutto</div>
-						</div>
-						<span class="menu-item-arrow"><i class="fas fa-chevron-right" aria-hidden="true"></i></span>
-					</button>
-					<button class="menu-item" onclick="openLightbox('images/crocche-arancino-italian-street-food.webp', 'Crocché / Arancino', 'Italian street food — crispy rice ball, croquette')" aria-label="View Crocché and Arancino">
-						<div class="menu-item-content">
-							<div class="name">Crocché · Arancino</div>
-							<div class="desc">Potato croquette and crispy rice ball — Sicilian street food</div>
-						</div>
-						<span class="menu-item-arrow"><i class="fas fa-chevron-right" aria-hidden="true"></i></span>
-					</button>
-					<button class="menu-item" onclick="openLightbox('images/pizzetta-baresina-traditional-round-pizza.webp', 'Pizzetta Baresina', 'Small traditional round pizza with olives')" aria-label="View Pizzetta Baresina">
-						<div class="menu-item-content">
-							<div class="name">Pizzetta Baresina</div>
-							<div class="desc">Small, soft traditional round pizza with tomatoes and olives</div>
-						</div>
-						<span class="menu-item-arrow"><i class="fas fa-chevron-right" aria-hidden="true"></i></span>
-					</button>
-				</div>
+                <!-- Rustici & Pizza -->
+                <div class="menu-category">
+                    <h3><i class="fas fa-pizza-slice" aria-hidden="true"></i> Rustici &amp; Pizza</h3>
+                    <button class="menu-item" onclick="openLightbox('images/pizza-napoletana-in-teglia-pan-baked.webp', 'Pizza Napoletana', 'Traditional pan-baked pizza with mozzarella')" aria-label="View Pizza Napoletana">
+                        <div class="menu-item-content">
+                            <div class="name">Pizza Napoletana in teglia</div>
+                            <div class="desc">Pan-baked pizza with tomato sauce and melted mozzarella</div>
+                        </div>
+                        <span class="menu-item-arrow"><i class="fas fa-chevron-right" aria-hidden="true"></i></span>
+                    </button>
+                    <button class="menu-item" onclick="openLightbox('images/focaccia-romana-pinsa-flatbread.webp', 'Focaccia Romana', 'Crispy Roman flatbread')" aria-label="View Focaccia Romana">
+                        <div class="menu-item-content">
+                            <div class="name">Focaccia Romana · Pinsa</div>
+                            <div class="desc">Crispy flatbread with tomato &amp; mozzarella or prosciutto</div>
+                        </div>
+                        <span class="menu-item-arrow"><i class="fas fa-chevron-right" aria-hidden="true"></i></span>
+                    </button>
+                    <button class="menu-item" onclick="openLightbox('images/crocche-arancino-italian-street-food.webp', 'Crocché / Arancino', 'Italian street food — crispy rice ball, croquette')" aria-label="View Crocché and Arancino">
+                        <div class="menu-item-content">
+                            <div class="name">Crocché · Arancino</div>
+                            <div class="desc">Potato croquette and crispy rice ball — Sicilian street food</div>
+                        </div>
+                        <span class="menu-item-arrow"><i class="fas fa-chevron-right" aria-hidden="true"></i></span>
+                    </button>
+                    <button class="menu-item" onclick="openLightbox('images/pizzetta-baresina-traditional-round-pizza.webp', 'Pizzetta Baresina', 'Small traditional round pizza with olives')" aria-label="View Pizzetta Baresina">
+                        <div class="menu-item-content">
+                            <div class="name">Pizzetta Baresina</div>
+                            <div class="desc">Small, soft traditional round pizza with tomatoes and olives</div>
+                        </div>
+                        <span class="menu-item-arrow"><i class="fas fa-chevron-right" aria-hidden="true"></i></span>
+                    </button>
+                </div>
 
-				<!-- Bibite & Bar -->
-				<div class="menu-category">
-					<h3><i class="fas fa-wine-glass-alt" aria-hidden="true"></i> Bibite &amp; Bar</h3>
-					<button class="menu-item" onclick="openLightbox('images/001 (14).webp', 'Vino / Prosecco', 'Fine Italian wines')" aria-label="View Vino and Prosecco">
-						<div class="menu-item-content">
-							<div class="name">Vino · Prosecco</div>
-							<div class="desc">Fine white or red wine by glass or bottle, and sparkling Prosecco</div>
-						</div>
-						<span class="menu-item-arrow"><i class="fas fa-chevron-right" aria-hidden="true"></i></span>
-					</button>
-					<button class="menu-item" onclick="openLightbox('images/001 (8).webp', 'Spritz / Limoncello', 'Classic Italian aperitifs')" aria-label="View Spritz and Limoncello">
-						<div class="menu-item-content">
-							<div class="name">Spritz · Limoncello</div>
-							<div class="desc">Refreshing Aperol/Campari Spritz and traditional Limoncello</div>
-						</div>
-						<span class="menu-item-arrow"><i class="fas fa-chevron-right" aria-hidden="true"></i></span>
-					</button>
-					<button class="menu-item" onclick="openLightbox('images/birra-greca-italiana-premium-beer.webp', 'Birra Greca & Italiana', 'Premium Greek and Italian beers')" aria-label="View Birra">
-						<div class="menu-item-content">
-							<div class="name">Birra (Greca &amp; Italiana)</div>
-							<div class="desc">Selection of ice-cold Greek and Italian beers</div>
-						</div>
-						<span class="menu-item-arrow"><i class="fas fa-chevron-right" aria-hidden="true"></i></span>
-					</button>
-					<button class="menu-item" onclick="openLightbox('images/acqua-lattine-succhi-refreshing-drinks.webp', 'Acqua & Succhi', 'Refreshing drinks')" aria-label="View Acqua and Succhi">
-						<div class="menu-item-content">
-							<div class="name">Acqua · Lattine · Succhi</div>
-							<div class="desc">Still or sparkling water, soft drinks, and fruit juices</div>
-						</div>
-						<span class="menu-item-arrow"><i class="fas fa-chevron-right" aria-hidden="true"></i></span>
-					</button>
-				</div>
+                <!-- Bibite & Bar -->
+                <div class="menu-category">
+                    <h3><i class="fas fa-wine-glass-alt" aria-hidden="true"></i> Bibite &amp; Bar</h3>
+                    <button class="menu-item" onclick="openLightbox('images/001 (14).webp', 'Vino / Prosecco', 'Fine Italian wines')" aria-label="View Vino and Prosecco">
+                        <div class="menu-item-content">
+                            <div class="name">Vino · Prosecco</div>
+                            <div class="desc">Fine white or red wine by glass or bottle, and sparkling Prosecco</div>
+                        </div>
+                        <span class="menu-item-arrow"><i class="fas fa-chevron-right" aria-hidden="true"></i></span>
+                    </button>
+                    <button class="menu-item" onclick="openLightbox('images/001 (8).webp', 'Spritz / Limoncello', 'Classic Italian aperitifs')" aria-label="View Spritz and Limoncello">
+                        <div class="menu-item-content">
+                            <div class="name">Spritz · Limoncello</div>
+                            <div class="desc">Refreshing Aperol/Campari Spritz and traditional Limoncello</div>
+                        </div>
+                        <span class="menu-item-arrow"><i class="fas fa-chevron-right" aria-hidden="true"></i></span>
+                    </button>
+                    <button class="menu-item" onclick="openLightbox('images/birra-greca-italiana-premium-beer.webp', 'Birra Greca & Italiana', 'Premium Greek and Italian beers')" aria-label="View Birra">
+                        <div class="menu-item-content">
+                            <div class="name">Birra (Greca &amp; Italiana)</div>
+                            <div class="desc">Selection of ice-cold Greek and Italian beers</div>
+                        </div>
+                        <span class="menu-item-arrow"><i class="fas fa-chevron-right" aria-hidden="true"></i></span>
+                    </button>
+                    <button class="menu-item" onclick="openLightbox('images/acqua-lattine-succhi-refreshing-drinks.webp', 'Acqua & Succhi', 'Refreshing drinks')" aria-label="View Acqua and Succhi">
+                        <div class="menu-item-content">
+                            <div class="name">Acqua · Lattine · Succhi</div>
+                            <div class="desc">Still or sparkling water, soft drinks, and fruit juices</div>
+                        </div>
+                        <span class="menu-item-arrow"><i class="fas fa-chevron-right" aria-hidden="true"></i></span>
+                    </button>
+                </div>
             </div>
         </div>
     </section>
@@ -1558,7 +1653,7 @@
                     </ul>
                 </div>
 
-                <!-- ПРАВА КОЛОНКА: Контакти (тепер вона всередині info-grid!) -->
+                <!-- ПРАВА КОЛОНКА: Контакти + Карта -->
                 <div class="info-box">
                     <h3><i class="fas fa-location-dot" aria-hidden="true"></i> Find Us</h3>
                     <a href="tel:+393287568257" class="contact-item">
@@ -1574,8 +1669,8 @@
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2564.956368274319!2d25.32292031568564!3d37.44476132981078!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a9149457e3750b%3A0x3d323a63e7fe3490!2sMykonos!5e0!3m2!1sen!2sgr!4v1612345678901!5m2!1sen!2sgr" allowfullscreen="" loading="lazy" title="Map showing Neapolis Cafe location in Mykonos"></iframe>
                     </div>
                 </div>
-            </div> <!-- info-grid закривається ТУТ, після обох колонок -->
-        </div> <!-- container -->
+            </div>
+        </div>
     </section>
 
     <!-- ===== LIGHTBOX ===== -->
@@ -1594,31 +1689,38 @@
     <footer role="contentinfo">
         <div class="container">
             <div class="logo" aria-hidden="true">Neapolis <span class="gold-text">Cafe</span></div>
-                  <div class="contact-details">
-					<p>Fabrika Agiou Ioannou, Mykonos Town 846000, Greece</p>
-					<p>
-						<i class="fas fa-phone-alt" aria-hidden="true"></i> +39 328 756 8257
-						&nbsp;·&nbsp; 
-						<i class="fas fa-envelope" aria-hidden="true"></i> neapolis.cafe.mykonos@gmail.com
-					</p>
+
+            <div class="contact-details-footer">
+                <p><i class="fas fa-map-pin" aria-hidden="true"></i> Fabrika Agiou Ioannou, Mykonos Town 846000, Greece</p>
+                <p>
+                    <i class="fas fa-phone-alt" aria-hidden="true"></i> +39 328 756 8257
+                    &nbsp;·&nbsp;
+                    <i class="fas fa-envelope" aria-hidden="true"></i> neapolis.cafe.mykonos@gmail.com
+                </p>
             </div>
 
             <div class="socials">
                 <a href="https://www.facebook.com/people/Neapoliscafe/61589749563900/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-                    <i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                    <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                </a>
                 <a href="https://www.instagram.com/neapolis.cafe.mykonos/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-                    <i class="fab fa-instagram" aria-hidden="true"></i></a>
+                    <i class="fab fa-instagram" aria-hidden="true"></i>
+                </a>
                 <a href="https://www.tiktok.com/@neapoliscafe" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
-                    <i class="fab fa-tiktok" aria-hidden="true"></i></a>
+                    <i class="fab fa-tiktok" aria-hidden="true"></i>
+                </a>
             </div>
-            <div style="display:flex; justify-content:center; gap:24px; flex-wrap:wrap; margin:16px 0 8px; font-size:0.9rem;">
-                <a href="/el/company-info.html" style="color:rgba(255,255,255,0.7); text-decoration:none; transition:color 0.3s;">🇬🇷 Εταιρική Διαφάνεια</a>
-                <span style="color:rgba(255,255,255,0.3);">|</span>
-                <a href="/en/company-info.html" style="color:rgba(255,255,255,0.7); text-decoration:none; transition:color 0.3s;">🇬🇧 Corporate Transparency</a>
+
+            <!-- 🔥 ОНОВЛЕНІ ПОСИЛАННЯ З КРАЩОЮ ВИДИМІСТЮ -->
+            <div class="footer-links">
+                <a href="/el/company-info.html" lang="el">🇬🇷 Εταιρική Διαφάνεια</a>
+                <span class="divider">|</span>
+                <a href="/en/company-info.html" lang="en">🇬🇧 Corporate Transparency</a>
             </div>
+
             <div class="copy">
                 &copy; 2026 Neapolis Cafe. Crafted with <i class="fas fa-heart" style="color: var(--gold-light);" aria-hidden="true"></i> in Mykonos.
-                <br /><span style="font-size: 0.8rem; opacity: 0.6;">Italian recipes · Aegean soul</span>
+                <br /><span style="font-size: 0.8rem; opacity: 0.6; color: rgba(255,255,255,0.5);">Italian recipes · Aegean soul</span>
             </div>
         </div>
     </footer>
