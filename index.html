@@ -1054,6 +1054,16 @@
             opacity: 0.6;
             margin-top: 8px;
         }
+		footer, footer p, footer span, footer div {
+			color: #ffffff !important;
+		}
+		footer a {
+			color: #f1c40f !important;
+			text-decoration: underline;
+		}
+		footer a:hover {
+			color: #ffffff !important;
+		}
 
         /* ============================================================
            RESPONSIVE — WCAG COMPLIANT
@@ -1531,23 +1541,22 @@
         <div class="container">
             <h2 class="section-title">Find <span class="accent">Us</span></h2>
             <p class="section-sub">Come visit us in the heart of Mykonos Town.</p>
-				<div class="info-grid">
-				    <div class="info-box">
-				        <h3><i class="fas fa-clock" aria-hidden="true"></i> Opening Hours</h3>
-				        <ul class="hours-list" aria-label="Cafe opening hours">
-				            <li><span>Monday</span><span class="time">8:00 AM - 3:00 PM · 6:00 PM - 4:00 AM</span></li>
-				        
-				            <li><span>Tuesday</span><span class="time">8:00 AM - 3:00 PM</span></li>
-				            <!-- <li><span>Tuesday</span><span class="time">Closed</span></li> -->  
-				            <!-- ================================================ -->				            
-				            <li><span>Wednesday</span><span class="time">8:00 AM - 3:00 PM · 6:00 PM - 4:00 AM</span></li>
-				            <li><span>Thursday</span><span class="time">8:00 AM - 3:00 PM · 6:00 PM - 4:00 AM</span></li>
-				            <li><span>Friday</span><span class="time">8:00 AM - 3:00 PM · 6:00 PM - 4:00 AM</span></li>
-				            <li><span>Saturday</span><span class="time">8:00 AM - 3:00 PM · 6:00 PM - 4:00 AM</span></li>
-				            <li><span>Sunday</span><span class="time">8:00 AM - 3:00 PM · 6:00 PM - 4:00 AM</span></li>
-				        </ul>
-				    </div>
-				</div>
+            <div class="info-grid">
+                <!-- ЛІВА КОЛОНКА: Години роботи -->
+                <div class="info-box">
+                    <h3><i class="fas fa-clock" aria-hidden="true"></i> Opening Hours</h3>
+                    <ul class="hours-list" aria-label="Cafe opening hours">
+                        <li><span>Monday</span><span class="time">8:00 AM - 3:00 PM · 6:00 PM - 4:00 AM</span></li>
+                        <li><span>Tuesday</span><span class="time">8:00 AM - 3:00 PM</span></li>
+                        <li><span>Wednesday</span><span class="time">8:00 AM - 3:00 PM · 6:00 PM - 4:00 AM</span></li>
+                        <li><span>Thursday</span><span class="time">8:00 AM - 3:00 PM · 6:00 PM - 4:00 AM</span></li>
+                        <li><span>Friday</span><span class="time">8:00 AM - 3:00 PM · 6:00 PM - 4:00 AM</span></li>
+                        <li><span>Saturday</span><span class="time">8:00 AM - 3:00 PM · 6:00 PM - 4:00 AM</span></li>
+                        <li><span>Sunday</span><span class="time">8:00 AM - 3:00 PM · 6:00 PM - 4:00 AM</span></li>
+                    </ul>
+                </div>
+
+                <!-- ПРАВА КОЛОНКА: Контакти (тепер вона всередині info-grid!) -->
                 <div class="info-box">
                     <h3><i class="fas fa-location-dot" aria-hidden="true"></i> Find Us</h3>
                     <a href="tel:+393287568257" class="contact-item">
@@ -1563,8 +1572,8 @@
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2564.956368274319!2d25.32292031568564!3d37.44476132981078!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a9149457e3750b%3A0x3d323a63e7fe3490!2sMykonos!5e0!3m2!1sen!2sgr!4v1612345678901!5m2!1sen!2sgr" allowfullscreen="" loading="lazy" title="Map showing Neapolis Cafe location in Mykonos"></iframe>
                     </div>
                 </div>
-            </div>
-        </div>
+            </div> <!-- info-grid закривається ТУТ, після обох колонок -->
+        </div> <!-- container -->
     </section>
 
     <!-- ===== LIGHTBOX ===== -->
@@ -1583,11 +1592,14 @@
     <footer role="contentinfo">
         <div class="container">
             <div class="logo" aria-hidden="true">Neapolis <span>Cafe</span></div>
-            <p style="opacity: 0.7; font-size: 1rem;">Fabrika Agiou Ioannou, Mykonos Town 846000, Greece</p>
-            <p style="opacity: 0.5; font-size: 0.9rem; margin-bottom: 4px;">
-                <i class="fas fa-phone-alt" style="margin-right: 6px;" aria-hidden="true"></i> +39 328 756 8257
-                &nbsp;·&nbsp; <i class="fas fa-envelope" style="margin-right: 6px;" aria-hidden="true"></i> neapolis.cafe.mykonos@gmail.com
-            </p>
+                  <div class="contact-details">
+					<p>Fabrika Agiou Ioannou, Mykonos Town 846000, Greece</p>
+					<p>
+						<i class="fas fa-phone-alt" aria-hidden="true"></i> +39 328 756 8257
+						&nbsp;·&nbsp; 
+						<i class="fas fa-envelope" aria-hidden="true"></i> neapolis.cafe.mykonos@gmail.com
+					</p>
+            </div>
 
             <div class="socials">
                 <a href="https://www.facebook.com/people/Neapoliscafe/61589749563900/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
